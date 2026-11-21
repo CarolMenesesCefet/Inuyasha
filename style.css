@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Luckiest+Guy&family=Ranchers&family=Russo+One&family=Syne+Mono&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.modal-container{
+	
+	background-image:url('img/introducao2.gif');
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	display: flex;
+
+	align-items:center;
+	justify-content:center;
+	
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	
+	z-index:2;
+	
+	display:none;
+}
+
+.modal-container.sumir{
+	
+	animation: desaparecer 1s ease forwards;
+}
+
+
+
+.modal{
+	
+	background-color:transparent;
+	width:60%;
+	max-width:60%;
+	
+	display: flex;
+	align-items:center;
+	justify-content:center;
+	flex-direction: column;
+	
+	
+}
+
+.logo-modal{
+	
+	width:80%;
+	
+	opacity: 0; 
+	animation: aparecer 3s ease forwards;
+	animation-delay: 1s;
+	transition: 0.5s;
+}
+
+.logo-modal.efeito{
+	
+	transform:scale(1.2);
+}
+
+#close-modal{
+	
+	
+	width:150px;
+
+
+	align-items: center;
+	justify-content:center;
+	text-align:center;
+	
+	background-color:rgba(0,0,0,0.3);
+	
+	color: white;
+	font-size: 40px;
+	font-family: "Ranchers", sans-serif;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
+	
+	opacity: 0; 
+	animation: aparecer 3s ease forwards;
+	animation-delay: 2s;
+	
+	transition: 1s;
+
+}
+
+#close-modal:hover{
+	
+	border: 2px solid red;
+	
+	background-color:rgba(255,0,0,0.3);
+	box-shadow: 5px 5px 15px 0px rgba(255, 254, 224, 0.7);
+	
+	transform:scale(1.2);
+	
+	cursor: pointer;
+}
+
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1; 
+  }
+}
+
+@keyframes desaparecer {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0; 
+  }
+}
+
+.body {
+	
+	background-color: #b33f25;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+  
+}
+
+/* Esconde no Firefox e navegadores antigos da Microsoft */
+html, body {
+  -ms-overflow-style: none;  /* IE e Edge antigo */
+  scrollbar-width: none;     /* Firefox */
+  overflow-x: hidden;
+
+}
+
+.flexbox-row{
+	
+	display: flex;
+	flex-direction: row;
+	align-items:center;
+	justify-content:center;
+	
+}
+
+.flexbox-coluna {
+	display: flex;
+	flex-direction: column; 
+	align-items:center;
+}
+
+.menu{
+	
+	background-color:#b33f25;
+	width:100%;
+	max-width:100%;
+	height: 50px;
+	margin:0;
+	padding: 2%;
+	justify-content: space-between;
+	display:flex;
+	align-items: center;
+}
+.logo-menu{
+	
+	width:10vh;
+	max-height:4vh;
+	margin-left:1%;
+}
+.links-menu{
+	
+	margin-right:3%;
+}
+
+.menu a{
+	
+	font-family: "Russo One", sans-serif;
+	font-weight: 400;
+	font-style: italic;
+	color:#FFDC69;
+	text-decoration: none;
+	margin: 1%;
+	
+	font-size: 20px;
+	text-shadow: 3px 3px 0px rgba(0, 0, 0, 1);
+	
+	-webkit-text-stroke-width: 0px;
+	-webkit-text-stroke-color: black;
+	
+	transition:0.5s;
+}
+
+.menu a:hover{
+	
+	color: yellow;
+	text-decoration: underline;
+	
+	
+}
+
+.container-mae{
+	
+	width:100%;
+	height:100vh;
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
+	
+}
+.secao{
+	
+	width:100%;
+	height:100vh;
+	scroll-snap-align: start;
+	
+}
+
+.div-titulos-secao{
+	
+	background-image: url("img/titulo.png");
+	width: 100%;
+	justify-content: center;
+	border-bottom: 3px solid white;
+	margin-bottom: 0.5%;
+	margin-top: 0.5%;
+	border-top: 3px solid white;
+	z-index:2;
+	-webkit-mask-image: radial-gradient(circle, white 30%, transparent 95%);
+	mask-image: radial-gradient(circle, white 30%, transparent 95%);
+	
+	
+
+	
+}
+
+.opening{
+	
+	background-image:url('img/opening3.gif');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position:50% 30%;
+	align-content: center;
+}
+.opening img{
+	
+	width: 50%;
+	
+}
+
+.fundo-persona{
+	
+	height:100vh;
+	width:100%;
+	background-image: radial-gradient(circle, transparent 70%, white 100%), linear-gradient(to left,
+  rgba(235, 112, 96, 0.9) 10%,
+  rgba(235, 112, 96, 0.9) 90%), url("img/flores.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position:50% 30%;
+	
+	display: flex;
+	flex-direction: row;
+	align-items:center;
+	
+	align-content: center;
+	justify-content: center;
+	
+}
+
+.persona{
+	
+	height:80vh;
+	max-height:80vh;
+	width:30vw;
+	
+	
+	background-image:url('img/inuyasha.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+
+	transform: translateX(0);
+	transition: opacity 0.5s ease-in-out;;
+	opacity: 1;
+}
+
+.passa-esquerda-out {
+	transform: translateX(-50px);
+	opacity: 0;
+	transition:  0.5s ease-in-out; 
+}
+.passa-direita-out {
+	transform: translateX(50px);
+	opacity: 0;
+	transition:  0.5s ease-in-out; 
+}
+
+.passa-esquerda-in {
+	transform: translateX(-50px);
+	opacity: 1;
+	transition:  0.5s ease-in-out; 
+}
+.passa-direita-in {
+	transform: translateX(50px);
+	opacity:1;
+	transition:  0.5s ease-in-out; 
+}
+
+.seta-personagem{
+	
+	width:50px;
+	height:50px;
+	transition:0.5s;
+	
+}
+
+.seta-personagem img{
+	
+	width: 100%;            
+	height: 100%;           
+	object-fit: scale-down;     
+	object-view-box: inset(-30%);
+	object-position: top center; 
+	opacity:70%;
+}
+
+.seta-personagem:hover {
+	
+	cursor: pointer;
+	transform:scale(1.2);
+}
+
+.texto-estilizado-persona{
+	
+	color: white;
+	font-family: "Garamond", sans-serif;
+	font-weight: bold;
+	stroke: black;
+	stroke-width: 2px;
+	stroke-linejoin: round; 
+	text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+	text-align: justify;
+	
+	white-space: normal;
+	padding: 5%;
+}
+
+
+
+
+
+
+
+* {
+  outline: 1px solid red;
+
+}
+body {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* -------------------- MEDIA QUERIES ----------------------*/
+
+@media only screen and (max-width: 800px) {
+ 
+
+ 
+ .links-menu{
+	
+	display:none;
+
+}
+
+.fundo-persona{
+	
+	display: flex;
+	flex-direction: column;
+	align-items:center;
+	
+	align-content: center;
+	justify-content: start;
+	padding-top:1%;
+	
+}
+
+.persona{
+	
+	max-height:40vh;
+	width: 40vw;
+	max-width: 40vw;
+	
+}
+
+.texto-estilizado-persona{
+	
+	font-size: 10px;
+}
+
+
+ 
+}

@@ -1,0 +1,355 @@
+<html>
+
+<head>
+
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		
+		
+		
+	<title> Inuyasha - CM Project</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Snowburst+One&display=swap">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Luckiest+Guy&family=Ranchers&family=Russo+One&family=Syne+Mono&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css"/>
+	
+	<link rel="icon" sizes="32x32" href="img/logo1.ico">
+	
+
+	
+
+</head>
+
+
+<body class="body">
+
+	<div class="modal-container" id="modal-container">
+	
+	
+		<div class="modal">
+		
+
+			
+			<img src="img/logo1.png" class="logo-modal" id="logoModal" >
+			
+			
+			
+			<div id="close-modal">
+			
+				Entrar
+			
+			</div>
+		
+		</div>
+
+	</div>
+	
+	<audio id="somEntrar" src="audio/inuyasha-chime.mp3" preload="auto"></audio>
+	
+	<audio id="musica_fundo" src="audio/musica-fundo.mp3" preload="auto"></audio>
+	
+	
+	
+
+	
+	
+	
+	
+	
+
+	<div class= "flexbox-row menu"> 
+			
+		<a href="#secao1" ><img src="img/logo1.png" class="logo-menu"></a>
+		
+		<div class= "flexbox-row links-menu">
+		
+			<a href="#secao2">PERSONAGENS</a>
+			<a href="#secao3">HISTÓRIA</a>
+			<a href="#secao4">GALERIA</a>
+			<a href="#secao5">MUSICAS</a>
+		
+		</div>
+	
+	</div>
+
+	<div class="container-mae">
+	
+		<div class="opening secao" id="opening">
+			<img src="img/logo2.png">
+		</div>
+		
+		
+		<div class=" secao">
+		
+			<div class="flexbox-row div-titulos-secao" id="secao2"> 
+			
+				<div class="estrela-borda estrela-esquerda">
+					<div class="estrela-dentro"></div>
+				</div>
+				<h1>Personagens</h1>
+				<div class="estrela-borda estrela-direita">
+					<div class="estrela-dentro"></div>
+				</div>
+			
+			</div>
+			
+			<div class= "fundo-persona">
+			
+				<div class= "flexbox-row">
+				
+					<div class="seta-personagem" id="persona-previous">
+					
+						<img src="img/previous.png">
+					
+					</div>
+					
+					<div class="persona" id="persona">					
+					</div>
+					
+					<div class="seta-personagem" id="persona-next">
+					
+						<img src="img/next.png">
+					
+					</div>
+					
+				</div>
+				
+				<div class="flexbox-coluna texto-estilizado-persona">
+				
+				<h1 id="persona_nome">Inuyasha</h1>
+				<br>
+				<h4 id="persona_descricao">É o protagonista do anime de mesmo nome. InuYasha é o filho do grande youkai general canino (Dai-Youkai Inu Taisho), com a princesa feudal Izayoi. Pelo fato de ser meio-youkai, ele é desprezado por seu meio-irmão Sesshomaru, que é um youkai puro. Seu desejo inicial é o de se tornar um Youkai completo utilizando a Shikon no tama (Joia de Quatro Almas) e assim subir na hierarquia youkai não sendo mais caçado ou incomodado. Suas pretensões começam a mudar ao conhecer a humana Kikyou, a sacerdotisa que protege a joia e, posteriormente, alteram-se mais ainda através da convivência com Agome (reencarnação de Kikyou). </h4>
+				
+				</div>
+				
+			</div>
+	
+		</div>
+		
+		
+		
+		<div class=" secao">
+		
+			<div class="flexbox-row div-titulos-secao" id="secao2"> 
+			
+				<div class="estrela-borda estrela-esquerda">
+					<div class="estrela-dentro"></div>
+				</div>
+				<h1>História</h1>
+				<div class="estrela-borda estrela-direita">
+					<div class="estrela-dentro"></div>
+				</div>
+			
+			</div>
+			
+			<div class= "fundo-persona">
+			
+			
+					
+			</div>
+			
+			
+		</div>
+		
+		<div class=" secao">
+		
+			<div class="flexbox-row div-titulos-secao" id="secao2"> 
+			
+				<div class="estrela-borda estrela-esquerda">
+					<div class="estrela-dentro"></div>
+				</div>
+				<h1>Galeria</h1>
+				<div class="estrela-borda estrela-direita">
+					<div class="estrela-dentro"></div>
+				</div>
+			
+			</div>
+
+			
+			
+		</div>
+	
+	
+	</div>
+	
+	
+	
+
+</body>
+
+
+</html>
+
+<script>
+
+	const modalContainer = document.getElementById('modal-container');
+	const closeModal = document.getElementById('close-modal');
+	
+	let logoModal = document.getElementById('logoModal');
+	
+	const somEntrar = document.getElementById('somEntrar');
+	const musicaFundo = document.getElementById('musica_fundo');
+		
+	
+	closeModal.addEventListener('click', (e) => {
+	
+		closeModal.style.display = 'none';
+		somEntrar.volume = 0.40;
+			 
+		somEntrar.play();
+		
+		logoModal.classList.add('efeito');
+		
+		
+		setTimeout(() => {
+			modalContainer.style.display = 'none';
+			
+			
+			}, 2000); 
+			
+			setTimeout(() => {
+		
+			musicaFundo.volume = 0.20;
+			musicaFundo.play();
+			
+			}, 3000); 
+		
+		
+	
+	})
+	
+	////////////////
+	
+	let persona_previous = document.getElementById('persona-previous');
+	let persona_next = document.getElementById('persona-next');
+	let persona = document.getElementById('persona');
+	let cont_persona = 1;
+	let persona_img = "";
+	
+	let persona_nome = document.getElementById('persona_nome');
+	let persona_descricao = document.getElementById('persona_descricao');
+	
+	let nome = "";
+	let descricao = "";
+	
+	persona_next.addEventListener('click', (e) => {
+	
+		persona.classList.add('passa-esquerda-out');
+		
+		if(cont_persona >= 1 && cont_persona < 8){ cont_persona += 1; if(cont_persona == 8) {cont_persona = 1;}console.log(cont_persona)}
+		
+		if (cont_persona == 1){
+		
+			persona_img ="url('img/inuyasha.png')";
+			nome = "Inuyasha";
+			descricao = "É o protagonista do anime de mesmo nome. InuYasha é o filho do grande youkai general canino (Dai-Youkai Inu Taisho), com a princesa feudal Izayoi. Pelo fato de ser meio-youkai, ele é desprezado por seu meio-irmão Sesshomaru, que é um youkai puro. Seu desejo inicial é o de se tornar um Youkai completo utilizando a Shikon no tama (Joia de Quatro Almas) e assim subir na hierarquia youkai não sendo mais caçado ou incomodado. Suas pretensões começam a mudar ao conhecer a humana Kikyou, a sacerdotisa que protege a joia e, posteriormente, alteram-se mais ainda através da convivência com Agome (reencarnação de Kikyou).";
+		
+		}else if(cont_persona == 2){
+		
+			persona_img = "url('img/agome.png')";
+			nome = "Agome Higurashi";
+			descricao = "Agome Higurashi é uma jovem que nasceu no Japão atual. Ela é a reencarnação da Sacerdotisa Kikyou, que viveu 500 anos antes. Por conta da reencarnação, Agome nasceu com a Jóia de Quatro Almas dentro de seu corpo, só descobrindo o fato no dia do seu aniversário de quinze anos, quando uma Youkai invade a era atual através do Poço-come-ossos do templo Higurashi e a leva para o Japão Feudal. Lá, ela conhece Inuyasha e a Shikon no tama é partida, assim ambos são encarregados de recuperar os fragmentos da Joia.";
+			
+		}else if(cont_persona == 3){
+		
+			persona_img = "url('img/miroki.png')";	
+			nome = "Mirok";
+			descricao = "Mirok é um monge da era feudal que carrega consigo a maldição do Buraco do Vento. Esta maldição é passada de geração em geração após ter sido lançada por Narak, fazendo com que o hospedeiro carregue em sua mão direita um buraco capaz de absorver qualquer coisa. Ele acaba se unindo ao grupo de Inuyasha após identificarem um objetivo comum: derrotar Narak. Com o tempo, Mirok prova ser um sujeito corajoso e fiel aos seus amigos, embora ainda enfrente problemas em ser completamente honesto com aldeões e mulheres, já que também é conhecido por falsos exorcismos e um aspecto (pretensamente) mulherengo.";
+			
+		}else if(cont_persona == 4){
+		
+			persona_img = "url('img/sango.png')";
+			nome =  "Sango";
+			descricao = "Sango é uma jovem exterminadora de Youkais, tendo sido treinada pela sua família e membros de sua aldeia. Ela é uma jovem honesta e determinada que fora enganada por Narak após um falso contrato pedido por este, que resultou no extermínio de sua aldeia e a quase morte de seu irmão, Kohaku. Após o esclarecimento dos fatos, Sango acaba unindo-se ao grupo de Inuyasha pelo objetivo comum de derrotar Narak. Ela quase sempre está acompanhada por Kirara, uma gata Youkai e seu animal de estimação desde criança.";
+			
+		}else if(cont_persona == 5){
+			
+			persona_img = "url('img/shippo.png')";
+			nome = "Shippo";
+			descricao = "Shippo é um pequeno Youkai raposa, ainda em idade infantil. Ele encontra Inuyasha ao tentar roubar os fragmentos da Joia para usá-los em uma vingança contra os irmãos Youkai Manten e Hiten, que mataram seu pai. Inuyasha e Agome ajudam Shippo, vingando a morte de seu pai e o pequeno Youkai passa a integrar o grupo. Com o tempo desenvolve uma amizade baseada em implicâncias com Inuyasha, além de passar muito tempo com Kirara.";
+			
+		}else if(cont_persona == 6){
+		
+			persona_img = "url('img/kirara.png')";
+			nome = "Kirara";
+			descricao = "Kirara é gata Youkai de Sango. Ela possui a habilidade de transitar entre a forma felina e a forma Youkai, nesta última apresenta presas longas, tamanho de grande porte, habilidade de voar e resistência ao fogo. Kirara é extremamente leal e ajuda o grupo diversas vezes.";
+			
+		}else if(cont_persona == 7){
+		
+			
+			persona_img = "url('img/kikyo.png')";
+			nome = "Kikyou";
+			descricao = "Kikyou é uma jovem sacerdotisa que viveu no Japão feudal e faleceu graças ao desejo e inveja de Narak. Kikyou era responsável por proteger a Shikon no Tama, a joia almejada pelos Youkais para aumentar o seu poder maligno. Por conta de sua responsabilidade, Kikyou mantinha uma postura fria e centrada, exterminando os Youkais que se aproximavam do vilarejo. Entretanto, o mesmo não acontece quando conhece Inuyasha, um meio-youkai por quem desenvolve sentimentos... Posteriormente, Kikyou é ressuscitada, passando a coletar almas de jovens recém falecidas para manter vivo seu corpo vazio de barro e ossos.";
+		
+		}
+
+		setTimeout(() => {
+			persona.style.backgroundImage = persona_img;
+			persona.classList.remove('passa-esquerda-out');
+			persona_nome.innerHTML = nome;
+			persona_descricao.innerHTML = descricao;
+			}, 1000);
+	})
+	
+	persona_previous.addEventListener('click', (e) => {
+	
+		persona.classList.add('passa-direita-out');
+		
+		if(cont_persona >= 1 && cont_persona <= 8){ cont_persona -= 1; if(cont_persona == 0) {cont_persona = 7;}console.log(cont_persona)}
+		
+		if (cont_persona == 1){
+		
+			persona_img ="url('img/inuyasha.png')";
+			nome = "Inuyasha";
+			descricao = "É o protagonista do anime de mesmo nome. InuYasha é o filho do grande youkai general canino (Dai-Youkai Inu Taisho), com a princesa feudal Izayoi. Pelo fato de ser meio-youkai, ele é desprezado por seu meio-irmão Sesshomaru, que é um youkai puro. Seu desejo inicial é o de se tornar um Youkai completo utilizando a Shikon no tama (Joia de Quatro Almas) e assim subir na hierarquia youkai não sendo mais caçado ou incomodado. Suas pretensões começam a mudar ao conhecer a humana Kikyou, a sacerdotisa que protege a joia e, posteriormente, alteram-se mais ainda através da convivência com Agome (reencarnação de Kikyou).";
+		
+		}else if(cont_persona == 2){
+		
+			persona_img = "url('img/agome.png')";
+			nome = "Agome Higurashi";
+			descricao = "Agome Higurashi é uma jovem que nasceu no Japão atual. Ela é a reencarnação da Sacerdotisa Kikyou, que viveu 500 anos antes. Por conta da reencarnação, Agome nasceu com a Jóia de Quatro Almas dentro de seu corpo, só descobrindo o fato no dia do seu aniversário de quinze anos, quando uma Youkai invade a era atual através do Poço-come-ossos do templo Higurashi e a leva para o Japão Feudal. Lá, ela conhece Inuyasha e a Shikon no tama é partida, assim ambos são encarregados de recuperar os fragmentos da Joia.";
+			
+		}else if(cont_persona == 3){
+		
+			persona_img = "url('img/miroki.png')";			
+			nome = "Mirok";
+			descricao = "Mirok é um monge da era feudal que carrega consigo a maldição do Buraco do Vento. Esta maldição é passada de geração em geração após ter sido lançada por Narak, fazendo com que o hospedeiro carregue em sua mão direita um buraco capaz de absorver qualquer coisa. Ele acaba se unindo ao grupo de Inuyasha após identificarem um objetivo comum: derrotar Narak. Com o tempo, Mirok prova ser um sujeito corajoso e fiel aos seus amigos, embora ainda enfrente problemas em ser completamente honesto com aldeões e mulheres, já que também é conhecido por falsos exorcismos e um aspecto (pretensamente) mulherengo.";
+			
+		}else if(cont_persona == 4){
+		
+			persona_img = "url('img/sango.png')";
+			nome =  "Sango";
+			descricao = "Sango é uma jovem exterminadora de Youkais, tendo sido treinada pela sua família e membros de sua aldeia. Ela é uma jovem honesta e determinada que fora enganada por Narak após um falso contrato pedido por este, que resultou no extermínio de sua aldeia e a quase morte de seu irmão, Kohaku. Após o esclarecimento dos fatos, Sango acaba unindo-se ao grupo de Inuyasha pelo objetivo comum de derrotar Narak. Ela quase sempre está acompanhada por Kirara, uma gata Youkai e seu animal de estimação desde criança.";
+			
+		}else if(cont_persona == 5){
+		
+			persona_img = "url('img/shippo.png')";
+			nome = "Shippo";
+			descricao = "Shippo é um pequeno Youkai raposa, ainda em idade infantil. Ele encontra Inuyasha ao tentar roubar os fragmentos da Joia para usá-los em uma vingança contra os irmãos Youkai Manten e Hiten, que mataram seu pai. Inuyasha e Agome ajudam Shippo, vingando a morte de seu pai e o pequeno Youkai passa a integrar o grupo. Com o tempo desenvolve uma amizade baseada em implicâncias com Inuyasha, além de passar muito tempo com Kirara.";
+			
+		}else if(cont_persona == 6){
+		
+			persona_img = "url('img/kirara.png')";
+			nome = "Kirara";
+			descricao = "Kirara é gata Youkai de Sango. Ela possui a habilidade de transitar entre a forma felina e a forma Youkai, nesta última apresenta presas longas, tamanho de grande porte, habilidade de voar e resistência ao fogo. Kirara é extremamente leal e ajuda o grupo diversas vezes.";
+			
+		}else if(cont_persona ==7){
+		
+			persona_img = "url('img/kikyo.png')";
+			nome = "Kikyou";
+			descricao = "Kikyou é uma jovem sacerdotisa que viveu no Japão feudal e faleceu graças ao desejo e inveja de Narak. Kikyou era responsável por proteger a Shikon no Tama, a joia almejada pelos Youkais para aumentar o seu poder maligno. Por conta de sua responsabilidade, Kikyou mantinha uma postura fria e centrada, exterminando os Youkais que se aproximavam do vilarejo. Entretanto, o mesmo não acontece quando conhece Inuyasha, um meio-youkai por quem desenvolve sentimentos... Posteriormente, Kikyou é ressuscitada, passando a coletar almas de jovens recém falecidas para manter vivo seu corpo vazio de barro e ossos.";
+		
+		}
+
+		setTimeout(() => {
+			persona.style.backgroundImage = persona_img;
+			persona.classList.remove('passa-direita-out');
+			persona_nome.innerHTML = nome;
+			persona_descricao.innerHTML = descricao;
+			}, 1000);
+	})
+
+</script>
